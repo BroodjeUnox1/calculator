@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.js">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>rekenmachine</title>
+</head>
+<body style="margin-top: 5%;">
+	<div class="col-md-12" style="height: 100px;">
+		<div class="col-md-5"></div>
+		<div class="col-md-2" style="background-color: black; height: 100px; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+			<input type="text" name="not" class="col-xs-12" style="margin-top: 13%; border-radius: 10px;" id="result" placeholder="result:">
+		</div>
+		<div class="col-md-5"></div>
+	</div>
+
+	<div class="col-md-12">
+		<div class="col-md-5"></div>
+		<div class="col-md-2" style="background-color: #6d737c; height: 400px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px;">
+			<div class="col-md-12" style="margin-top: 5%;">
+				<div class="col-md-3 input"><input type="button" value="+" onclick="dis('+')"/></div>
+  				<div class="col-md-3 input"><input type="button" value="-" onclick="dis('-')"/></div>
+  				<div class="col-md-3 input"><input type="button" value="*" onclick="dis('*')"/></div>
+  				<div class="col-md-3 input"><input type="button" value="/" onclick="dis('/')"/></div>
+			</div>
+			<div class="col-md-12" style="margin-top: 15%;">
+				<div class="col-md-3 input"><input type="button" value="7" onclick="dis('7')"/></div>
+				<div class="col-md-3 input"><input type="button" value="8" onclick="dis('8')"/></div>
+				<div class="col-md-3 input"><input type="button" value="9" onclick="dis('9')"/></div>
+			</div>
+			<div class="col-md-12" style="margin-top: 15%;">
+				<div class="col-md-3 input"><input type="button" value="4" onclick="dis('4')"/></div>
+				<div class="col-md-3 input"><input type="button" value="5" onclick="dis('5')"/></div>
+				<div class="col-md-3 input"><input type="button" value="6" onclick="dis('6')"/></div>
+			</div>
+			<div class="col-md-12" style="margin-top: 15%;">
+				<div class="col-md-3 input"><input type="button" value="1" onclick="dis('1')"/></div>
+				<div class="col-md-3 input"><input type="button" value="2" onclick="dis('2')"/></div>
+				<div class="col-md-3 input"><input type="button" value="3" onclick="dis('3')"/></div>
+				
+			</div>
+			<div class="col-md-12" style="margin-top: 15%;">
+				<div class="col-md-3 input"><input type="button" value="0" onclick="dis('0')"/></div>
+				<div class="col-md-3 input"><input type="button" value="." onclick="dis('.')"/></div>
+				<div class="col-md-3 input"><input type="button" value="c" onclick="clr()"/></div>
+				<div class="col-md-3 input"><input type="button" value="=" onclick="solve()"/></div>
+			</div>
+		</div>
+	</div>
+
+	<script> 
+         function dis(val) 
+         { 
+             document.getElementById("result").value+=val 
+         } 
+           
+         function solve() 
+         { 
+             let x = document.getElementById("result").value 
+             let y = eval(x) 
+             document.getElementById("result").value = y 
+         } 
+           
+         function clr() 
+         { 
+             document.getElementById("result").value = "" 
+         } 
+      </script> 
+</body>
+</html>

@@ -1,0 +1,19 @@
+input:hover:not([name="not"]) {
+	background-color: #1455b7;
+}
+
+input {
+	width: 40px;
+	height: 40px;
+	border-style: none;
+	border-radius: 50%;
+}
+
+.input {
+	width: 40px;
+	height: 40px;
+}
+
+body {
+	background-image: url(foto.jpg);
+}
